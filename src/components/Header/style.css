@@ -1,0 +1,7 @@
+.header {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    border-bottom: 10px solid red;
+    width: 100%;
+}
