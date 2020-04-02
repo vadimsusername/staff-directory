@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from "./components/Header";
 import Table from "./components/Table";
+import Search from "./components/Search";
 
 class App extends React.Component {
   state = {
@@ -21,10 +22,15 @@ class App extends React.Component {
     ]
   }
 
+  callback = (dataFromSearch) => {
+    this.setState({data:dataFromSearch});
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
+        <Search employees={this.state.data} getEmployee={this.callback} />
         <Table employees={this.state.data || [{name:"----", phone:"----"}]}/>
       </div>
     );
