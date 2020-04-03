@@ -3,35 +3,22 @@ import './App.css';
 import Header from "./components/Header";
 import Table from "./components/Table";
 import Search from "./components/Search";
-
+import staffData from "./staff.json";
 class App extends React.Component {
   state = {
-    data: [
-      {
-        name: "John",
-        phone: "267-544-2354"
-      },
-      {
-        name: "Mike",
-        phone: "326-954-0286"
-      },
-      {
-        name: "Lauren",
-        phone: "896-376-7204"
-      }
-    ]
+    staff: staffData
   }
 
   callback = (dataFromSearch) => {
-    this.setState({data:dataFromSearch});
+    this.setState({staff:dataFromSearch});
   }
 
   render() {
     return (
       <div className="App">
         <Header />
-        <Search employees={this.state.data} getEmployee={this.callback} />
-        <Table employees={this.state.data || [{name:"----", phone:"----"}]}/>
+        <Search employees={this.state.staff} getEmployee={this.callback} />
+        <Table employees={this.state.staff || [{name:"----", phone:"----"}]}/>
       </div>
     );
   }
