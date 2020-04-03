@@ -18,3 +18,7 @@ img {
     margin-right: 2px;
     margin-left: 2px;
 }
+
+.arrow:hover {
+    border: 2px solid yellow;
+}
