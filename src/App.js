@@ -20,7 +20,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Search employees={this.state.staff} getEmployee={this.callback} />
-        <Table employees={this.state.renderStaff || [{name:"----", phone:"----"}]}/>
+        <Table employees={this.state.renderStaff || [{name:"----", phone:"----"}] } sortEmployees={this.callback}/>
       </div>
     );
   }

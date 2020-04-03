@@ -5,6 +5,7 @@ import "./style.css";
 class Search extends React.Component {
 
     handleInput = (event) => {
+        console.log("in search");
         var searchTerm = event.target.value.toLowerCase().trim();
        
         var filtered = this.props.employees.filter(employee => {
