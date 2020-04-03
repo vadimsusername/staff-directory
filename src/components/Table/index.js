@@ -6,6 +6,23 @@ class Table extends React.Component {
     render(){
         return (
         <table>
+            <tr>
+                <th>
+                    Image
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    DOB
+                </th>
+            </tr>
             { this.props.employees.map(row => {
 
                 return (
