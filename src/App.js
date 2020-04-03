@@ -6,11 +6,13 @@ import Search from "./components/Search";
 import staffData from "./staff.json";
 class App extends React.Component {
   state = {
-    staff: staffData
+    staff: staffData,
+    renderStaff: staffData
   }
 
   callback = (dataFromSearch) => {
-    this.setState({staff:dataFromSearch});
+    this.setState({renderStaff:dataFromSearch});
+
   }
 
   render() {
@@ -18,7 +20,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Search employees={this.state.staff} getEmployee={this.callback} />
-        <Table employees={this.state.staff || [{name:"----", phone:"----"}]}/>
+        <Table employees={this.state.renderStaff || [{name:"----", phone:"----"}]}/>
       </div>
     );
   }

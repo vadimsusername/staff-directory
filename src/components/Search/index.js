@@ -3,9 +3,6 @@ import "./style.css";
 
 
 class Search extends React.Component {
-    state = {
-        found:""
-    };
 
     handleSearch = () => {
         console.log("in search");
@@ -24,11 +21,23 @@ class Search extends React.Component {
             this.props.getEmployee([this.props.employees[index]]);
         }
     };
+    handleInput = (event) => {
+        var searchTerm = event.target.value.toLowerCase();
+        var filtered = this.props.employees.filter(employee => {
+
+            return employee.name.toLowerCase().startsWith(searchTerm);
+
+        });
+
+        this.props.getEmployee(filtered);
+        return;
+
+    }
     render(){
         return (
         <>
             <label for="search">Name:</label>
-            <input type="text" id="search" name="name" ></input>
+            <input type="text" id="search" name="name" onChange={this.handleInput}></input>
             <button className="searchBtn" onClick={this.handleSearch}>Search</button>
         </>
         );
