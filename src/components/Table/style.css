@@ -19,6 +19,13 @@ img {
     margin-left: 2px;
 }
 
-.arrow:hover {
-    border: 2px solid yellow;
+#down:hover {
+    border: 2px solid blue;
+    background-color: yellowgreen;
+}
+
+#up:hover {
+    border: 2px solid yellowgreen;
+    background-color: blue;
+
 }
