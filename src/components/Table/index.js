@@ -12,8 +12,25 @@ class Table extends React.Component {
         var sorted = employeesCopy.sort((employeeA,employeeB) => {
             if(employeeA.name.toLowerCase() < employeeB.name.toLowerCase()){
                 return -1;
-            }else if(employeeA.name.toLowerCase() < employeeB.name.toLowerCase()){
+            }else if(employeeB.name.toLowerCase() < employeeA.name.toLowerCase()){
                 return 1;
+            }else {
+                return 0;
+            }          
+        })
+        console.log(sorted);
+        this.props.sortEmployees(sorted);
+        return sorted;
+    };
+
+    handleSortDescending = (event) => {
+      
+        var employeesCopy = this.props.employees;
+        var sorted = employeesCopy.sort((employeeA,employeeB) => {
+            if(employeeA.name.toLowerCase() < employeeB.name.toLowerCase()){
+                return 1;
+            }else if(employeeB.name.toLowerCase() < employeeA.name.toLowerCase()){
+                return -1;
             }else {
                 return 0;
             }          
