@@ -10,8 +10,8 @@ class Table extends React.Component {
                 <th>
                     Image
                 </th>
-                <th>
-                    Name
+                <th onClick={this.handleSort}>
+                    <img className="arrow" src="https://cdn.pixabay.com/photo/2013/07/12/13/52/arrow-147464_960_720.png" alt="Sort Ascending"></img>Name <img className="arrow" src="https://cdn.pixabay.com/photo/2016/03/31/18/34/arrow-1294471_960_720.png" alt="Sort Descending"></img>
                 </th>
                 <th>
                     Phone

@@ -11,3 +11,9 @@ img {
     height: 50px;
     width: 50px;
 }
+
+.arrow {
+    height: 12px;
+    width: 12px;
+    margin-right: 2px;
+}
