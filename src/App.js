@@ -12,10 +12,13 @@ class App extends React.Component {
 
   callback = (dataFromSearch) => {
     this.setState({renderStaff:dataFromSearch});
+    console.log(dataFromSearch);
+    //console.log(this.state.renderStaff);
 
   }
 
   render() {
+    console.log(this.state.renderStaff);
     return (
       <div className="App">
         <Header />
